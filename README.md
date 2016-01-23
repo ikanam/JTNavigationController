@@ -6,4 +6,6 @@
 ####集成方法
  1. 替换原`window`的`rootViewController`为`[[JTBaseNavigationController alloc] initWithRootViewController:原rootViewController]`
  2. 替换原`UINavigationController`为`JTNavigationController`
+ 3. 默认的返回按钮图标在`JTBaseNavigationController.h`中修改
+ 
  
