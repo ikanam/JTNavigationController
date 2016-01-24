@@ -10,10 +10,10 @@
 ####集成方法
  1. 替换原`window`的`rootViewController`为`[[JTBaseNavigationController alloc] initWithRootViewController:原rootViewController]`
  2. 替换原`UINavigationController`为`JTNavigationController`
- 
+
 
  ####相关操作
- 1. push,pop,popToRoot的操作可以无需作调整,使用`self.navigationController`的方法就行,`popToViewController`稍微有些不同,详情见Demo中的代码.
+ * push,pop,popToRoot的操作可以无需作调整,使用`self.navigationController`的方法就行,`popToViewController`稍微有些不同,详情见Demo中的代码.
  2. 修改状态栏颜色,用`preferredStatusBarStyle`或者`[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]`(需要在info文件中加入View controller-based status bar appearance = NO).
  3. 默认的返回按钮图标在`JTBaseNavigationController.h`中修改,也可以单独修改`leftBarButtonItem`.
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
