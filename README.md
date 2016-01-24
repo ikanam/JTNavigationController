@@ -11,6 +11,7 @@
  1. 替换原`window`的`rootViewController`为`[[JTBaseNavigationController alloc] initWithRootViewController:原rootViewController]`
  2. 替换原`UINavigationController`为`JTNavigationController`
  
+
  ####相关操作
  1. push,pop,popToRoot的操作可以无需作调整,使用`self.navigationController`的方法就行,`popToViewController`稍微有些不同,详情见Demo中的代码.
  2. 修改状态栏颜色,用`preferredStatusBarStyle`或者`[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]`(需要在info文件中加入View controller-based status bar appearance = NO).
