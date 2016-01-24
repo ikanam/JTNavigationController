@@ -8,7 +8,7 @@
 
 #import "JTViewController.h"
 #import "UIColor+RandomColor.h"
-#import "JTNavigationController.h"
+#import "JTBaseNavigationController.h"
 
 @interface JTViewController ()
 
@@ -38,8 +38,7 @@
 }
 
 - (IBAction)didTapPopToButton:(id)sender {
-    JTWrapNavigationController *nav = (JTWrapNavigationController *)self.navigationController;
-    [self.navigationController popToViewController:nav.rootViewControllers.firstObject animated:YES];
+    [self.navigationController popToViewController:[JTBaseNavigationController shareNavgationController].rootViewControllers.firstObject animated:YES];
 }
 
 - (IBAction)didTapPopToRootButton:(id)sender {

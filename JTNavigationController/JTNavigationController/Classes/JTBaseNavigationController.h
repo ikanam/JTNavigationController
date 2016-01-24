@@ -14,4 +14,6 @@
 
 + (instancetype)shareNavgationController;
 
+@property (nonatomic, copy) NSArray<UIViewController *> *rootViewControllers;
+
 @end

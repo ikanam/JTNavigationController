@@ -15,15 +15,6 @@
 
 @implementation JTWrapNavigationController
 
-- (NSArray<UIViewController *> *)rootViewControllers {
-    NSMutableArray<UIViewController *> *rootViewControllers = [NSMutableArray array];
-    for (UIViewController *viewControllers in [JTBaseNavigationController shareNavgationController].viewControllers) {
-        UINavigationController *wrapNavController = viewControllers.childViewControllers.firstObject;
-        [rootViewControllers addObject:wrapNavController.viewControllers.firstObject];
-    }
-    return rootViewControllers.copy;
-}
-
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
     return [[JTBaseNavigationController shareNavgationController] popViewControllerAnimated:animated];
 }
@@ -33,7 +24,7 @@
 }
 
 - (NSArray<UIViewController *> *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    NSInteger index = [[self rootViewControllers] indexOfObject:viewController];
+    NSInteger index = [[JTBaseNavigationController shareNavgationController].rootViewControllers indexOfObject:viewController];
     return [[JTBaseNavigationController shareNavgationController] popToViewController:[JTBaseNavigationController shareNavgationController].viewControllers[index] animated:animated];
 }
 

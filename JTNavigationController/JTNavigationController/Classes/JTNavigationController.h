@@ -11,8 +11,6 @@
 
 @interface JTWrapNavigationController : UINavigationController
 
-@property (nonatomic, copy) NSArray<UIViewController *> *rootViewControllers;
-
 @end
 
 

@@ -35,6 +35,7 @@
 
 @implementation JTBaseNavigationController
 
+
 + (instancetype)shareNavgationController {
     
     static JTBaseNavigationController *baseNavigationController;
@@ -44,6 +45,13 @@
     });
     
     return baseNavigationController;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setNavigationBarHidden:YES];
+    self.delegate = self;
+    self.interactivePopGestureRecognizer.delegate = nil;
 }
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
@@ -59,11 +67,13 @@
     return wrapViewController;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setNavigationBarHidden:YES];
-    self.delegate = self;
-    self.interactivePopGestureRecognizer.delegate = nil;
+- (NSArray<UIViewController *> *)rootViewControllers {
+    NSMutableArray<UIViewController *> *rootViewControllers = [NSMutableArray array];
+    for (UIViewController *viewControllers in self.viewControllers) {
+        UINavigationController *wrapNavController = viewControllers.childViewControllers.firstObject;
+        [rootViewControllers addObject:wrapNavController.viewControllers.firstObject];
+    }
+    return rootViewControllers.copy;
 }
 
 //解决某些情况push会卡死的情况
