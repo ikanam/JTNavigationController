@@ -10,7 +10,7 @@
 ####集成方法
  1. 替换原`window`的`rootViewController`为`[[JTBaseNavigationController alloc] initWithRootViewController:原rootViewController]`.
  
- 2. 替换原`UINavigationController`为`JTNavigationController`
+ 2. 将需要实现该动画效果的`UINavigationController`替换为为`JTNavigationController`
 
 
 ####相关操作
@@ -21,3 +21,7 @@
  3. 默认的返回按钮图标在`JTBaseNavigationController.h`中修改,也可以单独修改`leftBarButtonItem`.
  
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
+ 5. 
+ 
+####已知问题
+ 1. 暂不支持storyboard,有时间我看看
