@@ -35,14 +35,16 @@
 
 @implementation JTBaseNavigationController
 
+static JTBaseNavigationController *baseNavigationController;
 
 + (instancetype)shareNavgationController {
     
-    static JTBaseNavigationController *baseNavigationController;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        baseNavigationController = [[JTBaseNavigationController alloc] init];
-    });
+    if (!baseNavigationController) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            baseNavigationController = [[JTBaseNavigationController alloc] init];
+        });
+    }
     
     return baseNavigationController;
 }
@@ -57,6 +59,12 @@
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     JTBaseNavigationController *baseNavigationController = [JTBaseNavigationController shareNavgationController];
     baseNavigationController.viewControllers = @[[self wrapViewConrollerWithViewController:rootViewController]];
+    return baseNavigationController;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    baseNavigationController = [super initWithCoder:aDecoder];
+    baseNavigationController.viewControllers = @[[self wrapViewConrollerWithViewController:baseNavigationController.viewControllers.firstObject]];
     return baseNavigationController;
 }
 

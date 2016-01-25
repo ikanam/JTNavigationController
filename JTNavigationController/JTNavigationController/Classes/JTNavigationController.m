@@ -86,6 +86,7 @@
 
 @implementation JTNavigationController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationBarHidden:YES];
@@ -94,6 +95,13 @@
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     if (self = [super init]) {
         self.viewControllers = @[[JTWrapViewController wrapViewControllerWithViewController:rootViewController]];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        self.viewControllers = @[[JTWrapViewController wrapViewControllerWithViewController:self.viewControllers.firstObject]];
     }
     return self;
 }

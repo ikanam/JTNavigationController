@@ -20,6 +20,7 @@
 		94DDA7951C53BDFE0055D8A1 /* JTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94DDA7921C53BDFE0055D8A1 /* JTViewController.xib */; };
 		94DDA7981C53BEA00055D8A1 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7961C53BEA00055D8A1 /* UIColor+RandomColor.m */; };
 		94DDA79B1C53BF1F0055D8A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7991C53BF1F0055D8A1 /* MainViewController.m */; };
+		D273255D1C5630DD00FA8C2E /* JTSBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D273255C1C5630DD00FA8C2E /* JTSBViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		94DDA7971C53BEA00055D8A1 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
 		94DDA7991C53BF1F0055D8A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		94DDA79A1C53BF1F0055D8A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D273255B1C5630DD00FA8C2E /* JTSBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSBViewController.h; sourceTree = "<group>"; };
+		D273255C1C5630DD00FA8C2E /* JTSBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				94DDA7931C53BDFE0055D8A1 /* JTViewController.h */,
 				94DDA7911C53BDFE0055D8A1 /* JTViewController.m */,
 				94DDA7921C53BDFE0055D8A1 /* JTViewController.xib */,
+				D273255B1C5630DD00FA8C2E /* JTSBViewController.h */,
+				D273255C1C5630DD00FA8C2E /* JTSBViewController.m */,
 				94DDA7731C53BD190055D8A1 /* Main.storyboard */,
 				94DDA7761C53BD190055D8A1 /* Assets.xcassets */,
 				94DDA7781C53BD190055D8A1 /* LaunchScreen.storyboard */,
@@ -198,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DDA78A1C53BD460055D8A1 /* JTBaseNavigationController.m in Sources */,
+				D273255D1C5630DD00FA8C2E /* JTSBViewController.m in Sources */,
 				94DDA7941C53BDFE0055D8A1 /* JTViewController.m in Sources */,
 				94DDA78B1C53BD460055D8A1 /* JTNavigationController.m in Sources */,
 				94DDA76F1C53BD190055D8A1 /* AppDelegate.m in Sources */,
@@ -350,6 +356,7 @@
 				94DDA7801C53BD190055D8A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
