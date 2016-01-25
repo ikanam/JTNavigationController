@@ -13,6 +13,10 @@
 
 #pragma mark - JTWrapNavigationController
 
+@interface JTWrapNavigationController : UINavigationController
+
+@end
+
 @implementation JTWrapNavigationController
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {

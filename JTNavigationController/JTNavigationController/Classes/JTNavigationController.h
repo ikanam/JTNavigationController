@@ -8,19 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface JTWrapNavigationController : UINavigationController
-
-@end
-
-
-
 @interface JTWrapViewController : UIViewController
 
 + (JTWrapViewController *)wrapViewControllerWithViewController:(UIViewController *)viewController;
 
 @end
-
 
 
 @interface JTNavigationController : UINavigationController
