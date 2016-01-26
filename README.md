@@ -17,6 +17,8 @@
 
  2. 将需要实现该动画效果的`UINavigationController`的Class替换为`JTNavigationController`
 
+ 3. 新加入了全屏返回手势,`fullScreenPopGestureEnable = YES`即可开启.
+
 
 ####相关操作
  1. push,pop,popToRoot的操作可以无需作调整,使用`self.navigationController`的方法就行,`popToViewController`稍微有些不同,详情见Demo中的代码.
