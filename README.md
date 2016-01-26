@@ -12,6 +12,11 @@
  
  2. 将需要实现该动画效果的`UINavigationController`替换为为`JTNavigationController`
 
+如果你使用的是storyboard:
+ 1. 在根控制器外加一个`UINavigationController`,将Class改为`JTBaseNavigationController`,并将原来的根控制器设为`rootViewController`,记得设置Initial.
+
+ 2. 将需要实现该动画效果的`UINavigationController`的Class替换为`JTNavigationController`
+
 
 ####相关操作
  1. push,pop,popToRoot的操作可以无需作调整,使用`self.navigationController`的方法就行,`popToViewController`稍微有些不同,详情见Demo中的代码.
@@ -22,5 +27,3 @@
  
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
  
-####已知问题
- 1. 暂不支持storyboard,有时间我看看
