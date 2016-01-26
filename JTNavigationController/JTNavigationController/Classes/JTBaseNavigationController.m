@@ -29,7 +29,9 @@
 
 @end
 
-@interface JTBaseNavigationController () <UINavigationControllerDelegate>
+@interface JTBaseNavigationController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) UIPanGestureRecognizer *popPanGesture;
 
 @end
 
@@ -53,7 +55,17 @@ static JTBaseNavigationController *baseNavigationController;
     [super viewDidLoad];
     [self setNavigationBarHidden:YES];
     self.delegate = self;
-    self.interactivePopGestureRecognizer.delegate = nil;
+    
+    if (self.fullScreenPopGestureEnable) {
+        id target = self.interactivePopGestureRecognizer.delegate;
+        SEL action = NSSelectorFromString(@"handleNavigationTransition:");
+        self.popPanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:target action:action];
+        [self.view addGestureRecognizer:self.popPanGesture];
+        self.popPanGesture.maximumNumberOfTouches = 1;
+        self.interactivePopGestureRecognizer.enabled = NO;
+    } else {
+        self.interactivePopGestureRecognizer.delegate = nil;
+    }
 }
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
@@ -86,8 +98,22 @@ static JTBaseNavigationController *baseNavigationController;
 
 //解决某些情况push会卡死的情况
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
     BOOL isRootVC = viewController == navigationController.viewControllers.firstObject;
-    navigationController.interactivePopGestureRecognizer.enabled = !isRootVC;
+    
+    if (self.fullScreenPopGestureEnable) {
+        id target = self.interactivePopGestureRecognizer.delegate;
+        SEL action = NSSelectorFromString(@"handleNavigationTransition:");
+        
+        if (isRootVC) {
+            [self.popPanGesture removeTarget:target action:action];
+        } else {
+            [self.popPanGesture addTarget:target action:action];
+        }
+    } else {
+        self.interactivePopGestureRecognizer.enabled = !isRootVC;
+    }
+   
 }
 
 @end

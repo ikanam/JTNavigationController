@@ -24,6 +24,7 @@
     //使用storyboard请将下面三行代码注释
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[JTBaseNavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+    [JTBaseNavigationController shareNavgationController].fullScreenPopGestureEnable = YES;
     [self.window makeKeyAndVisible];
     
     self.window.backgroundColor = [UIColor whiteColor];

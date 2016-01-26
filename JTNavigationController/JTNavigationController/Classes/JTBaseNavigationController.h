@@ -14,6 +14,8 @@
 
 + (instancetype)shareNavgationController;
 
-@property (nonatomic, copy) NSArray<UIViewController *> *rootViewControllers;
+@property (nonatomic, assign) BOOL fullScreenPopGestureEnable; /**<是否开启全屏侧滑返回手势*/
+
+@property (nonatomic, copy) NSArray<UIViewController *> *rootViewControllers; /**<真正的viewControllers*/
 
 @end
