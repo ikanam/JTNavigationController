@@ -15,9 +15,7 @@
 如果你使用的是storyboard:
  1. 在根控制器外加一个`UINavigationController`,将Class改为`JTBaseNavigationController`,并将原来的根控制器设为`rootViewController`,记得设置Initial.
 
- 2. 将需要实现该动画效果的`UINavigationController`的Class替换为`JTNavigationController`
-
- 3. 新加入了全屏返回手势,`fullScreenPopGestureEnable = YES`即可开启.
+ 2. 将需要实现该动画效果的`UINavigationController`的Class替换为`JTNavigationController`.
 
 
 ####相关操作
@@ -29,3 +27,4 @@
  
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
  
+ 5. 新加入了全屏返回手势,`fullScreenPopGestureEnable = YES`即可开启.
