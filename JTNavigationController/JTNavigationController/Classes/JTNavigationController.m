@@ -9,7 +9,7 @@
 #import "JTNavigationController.h"
 #import "JTBaseNavigationController.h"
 
-
+#define kDefaultBackImageName @"backImage"
 
 #pragma mark - JTWrapNavigationController
 
@@ -33,7 +33,17 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kDefaultBackImageName] style:UIBarButtonItemStylePlain target:self action:@selector(didTapBackButton)];
+    
+    UIImage *backButtonImage;
+    
+    if ([JTBaseNavigationController shareNavgationController].backButtonImage) {
+        backButtonImage = [JTBaseNavigationController shareNavgationController].backButtonImage;
+    } else {
+        backButtonImage = [UIImage imageNamed:kDefaultBackImageName];
+    }
+    
+    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backButtonImage style:UIBarButtonItemStylePlain target:self action:@selector(didTapBackButton)];
+    
     [[JTBaseNavigationController shareNavgationController] pushViewController:[JTWrapViewController wrapViewControllerWithViewController:viewController] animated:animated];
 }
 
