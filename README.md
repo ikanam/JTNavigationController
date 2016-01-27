@@ -23,7 +23,7 @@
  
  2. 修改状态栏颜色,用`preferredStatusBarStyle`或者`[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]`(需要在info文件中加入View controller-based status bar appearance = NO).
  
- 3. 默认的返回按钮图标在`JTBaseNavigationController.h`中修改,也可以单独修改`leftBarButtonItem`.
+ 3. 返回按钮图标设置请修改`backButtonImage`属性.
  
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
  
