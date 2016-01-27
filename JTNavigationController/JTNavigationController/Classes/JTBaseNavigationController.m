@@ -64,7 +64,7 @@ static JTBaseNavigationController *baseNavigationController;
         self.popPanGesture.maximumNumberOfTouches = 1;
         self.interactivePopGestureRecognizer.enabled = NO;
     } else {
-        self.interactivePopGestureRecognizer.delegate = nil;
+        self.interactivePopGestureRecognizer.delegate = self;
     }
 }
 
@@ -114,6 +114,15 @@ static JTBaseNavigationController *baseNavigationController;
         self.interactivePopGestureRecognizer.enabled = !isRootVC;
     }
    
+}
+
+//修复有水平方向滚动的ScrollView时边缘返回手势失效的问题
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return [gestureRecognizer isKindOfClass:UIScreenEdgePanGestureRecognizer.class];
 }
 
 @end
