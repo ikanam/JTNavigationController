@@ -88,11 +88,19 @@ static JTBaseNavigationController *baseNavigationController;
 }
 
 - (NSArray<UIViewController *> *)rootViewControllers {
+    
     NSMutableArray<UIViewController *> *rootViewControllers = [NSMutableArray array];
-    for (UIViewController *viewControllers in self.viewControllers) {
-        UINavigationController *wrapNavController = viewControllers.childViewControllers.firstObject;
-        [rootViewControllers addObject:wrapNavController.viewControllers.firstObject];
+    
+    for (NSInteger i = 0; i < self.viewControllers.count; i++) {
+        UIViewController *viewController = self.viewControllers[i];
+        if ([viewController isKindOfClass:JTBaseWrapViewController.class]) {
+            [rootViewControllers addObject:viewController.childViewControllers.firstObject];
+        } else {
+            UINavigationController *wrapNavController = viewController.childViewControllers.firstObject;
+            [rootViewControllers addObject:wrapNavController.viewControllers.firstObject];
+        }
     }
+    
     return rootViewControllers.copy;
 }
 
