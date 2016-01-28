@@ -28,3 +28,7 @@
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
  
  5. 新加入了全屏返回手势,`fullScreenPopGestureEnable = YES`即可开启.
+
+####已知问题
+ 1. UITabBarController的tabBar在push时会被隐藏，如果有需求是需要不隐藏tabBar的可以再等等看。
+ 2. 其他隐藏的问题应该还有很多，希望有问题的能提出来。
