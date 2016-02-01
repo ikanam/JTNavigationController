@@ -108,11 +108,10 @@ static JTBaseNavigationController *baseNavigationController;
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     BOOL isRootVC = viewController == navigationController.viewControllers.firstObject;
+    id target = self.interactivePopGestureRecognizer.delegate;
+    SEL action = NSSelectorFromString(@"handleNavigationTransition:");
     
     if (self.fullScreenPopGestureEnable) {
-        id target = self.interactivePopGestureRecognizer.delegate;
-        SEL action = NSSelectorFromString(@"handleNavigationTransition:");
-        
         if (isRootVC) {
             [self.popPanGesture removeTarget:target action:action];
         } else {
@@ -120,6 +119,7 @@ static JTBaseNavigationController *baseNavigationController;
         }
     } else {
         self.interactivePopGestureRecognizer.enabled = !isRootVC;
+        [self.popPanGesture removeTarget:target action:action];
     }
    
 }
