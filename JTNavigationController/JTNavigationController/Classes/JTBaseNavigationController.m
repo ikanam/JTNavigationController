@@ -55,6 +55,10 @@ static JTBaseNavigationController *baseNavigationController;
     [super viewDidLoad];
     [self setNavigationBarHidden:YES];
     self.delegate = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     if (self.fullScreenPopGestureEnable) {
         id target = self.interactivePopGestureRecognizer.delegate;
@@ -118,10 +122,10 @@ static JTBaseNavigationController *baseNavigationController;
             [self.popPanGesture addTarget:target action:action];
         }
     } else {
-        self.interactivePopGestureRecognizer.enabled = !isRootVC;
         [self.popPanGesture removeTarget:target action:action];
     }
-   
+    
+    self.interactivePopGestureRecognizer.enabled = !isRootVC;
 }
 
 //修复有水平方向滚动的ScrollView时边缘返回手势失效的问题
