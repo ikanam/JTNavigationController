@@ -57,8 +57,8 @@ static JTBaseNavigationController *baseNavigationController;
     self.delegate = self;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     
     if (self.fullScreenPopGestureEnable) {
         id target = self.interactivePopGestureRecognizer.delegate;
@@ -70,6 +70,7 @@ static JTBaseNavigationController *baseNavigationController;
     } else {
         self.interactivePopGestureRecognizer.delegate = self;
     }
+    
 }
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
