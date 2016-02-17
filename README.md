@@ -12,7 +12,7 @@
 #####1. 代码方式
 将原来的`UINavigationController`替换为`JTNavigationController`即可.
   
-#####2. stroyboard方式
+#####2. storyboard方式
 修改`UINavigationController`的class为`JTNavigationController`
 
 ####相关操作
