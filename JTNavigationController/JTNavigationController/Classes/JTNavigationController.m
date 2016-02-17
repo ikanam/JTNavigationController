@@ -92,6 +92,7 @@ static NSValue *jt_tabBarRectValue;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.translucent = YES;
     if (self.tabBarController && !self.tabBarController.tabBar.hidden && jt_tabBarRectValue) {
         self.tabBarController.tabBar.frame = jt_tabBarRectValue.CGRectValue;
     }
