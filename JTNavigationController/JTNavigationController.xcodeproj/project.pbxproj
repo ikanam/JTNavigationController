@@ -14,13 +14,12 @@
 		94DDA77A1C53BD190055D8A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DDA7781C53BD190055D8A1 /* LaunchScreen.storyboard */; };
 		94DDA7881C53BD460055D8A1 /* backImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94DDA7821C53BD460055D8A1 /* backImage@2x.png */; };
 		94DDA7891C53BD460055D8A1 /* backImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94DDA7831C53BD460055D8A1 /* backImage@3x.png */; };
-		94DDA78A1C53BD460055D8A1 /* JTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7851C53BD460055D8A1 /* JTBaseNavigationController.m */; };
 		94DDA78B1C53BD460055D8A1 /* JTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7871C53BD460055D8A1 /* JTNavigationController.m */; };
 		94DDA7941C53BDFE0055D8A1 /* JTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7911C53BDFE0055D8A1 /* JTViewController.m */; };
 		94DDA7951C53BDFE0055D8A1 /* JTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94DDA7921C53BDFE0055D8A1 /* JTViewController.xib */; };
 		94DDA7981C53BEA00055D8A1 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7961C53BEA00055D8A1 /* UIColor+RandomColor.m */; };
 		94DDA79B1C53BF1F0055D8A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DDA7991C53BF1F0055D8A1 /* MainViewController.m */; };
-		D273255D1C5630DD00FA8C2E /* JTSBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D273255C1C5630DD00FA8C2E /* JTSBViewController.m */; };
+		D21AAB4B1C741F9800CFF134 /* UIViewController+JTNavigationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D21AAB4A1C741F9800CFF134 /* UIViewController+JTNavigationExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,6 @@
 		94DDA77B1C53BD190055D8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DDA7821C53BD460055D8A1 /* backImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backImage@2x.png"; sourceTree = "<group>"; };
 		94DDA7831C53BD460055D8A1 /* backImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backImage@3x.png"; sourceTree = "<group>"; };
-		94DDA7841C53BD460055D8A1 /* JTBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseNavigationController.h; sourceTree = "<group>"; };
-		94DDA7851C53BD460055D8A1 /* JTBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTBaseNavigationController.m; sourceTree = "<group>"; };
 		94DDA7861C53BD460055D8A1 /* JTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTNavigationController.h; sourceTree = "<group>"; };
 		94DDA7871C53BD460055D8A1 /* JTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTNavigationController.m; sourceTree = "<group>"; };
 		94DDA7911C53BDFE0055D8A1 /* JTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTViewController.m; sourceTree = "<group>"; };
@@ -45,8 +42,8 @@
 		94DDA7971C53BEA00055D8A1 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
 		94DDA7991C53BF1F0055D8A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		94DDA79A1C53BF1F0055D8A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		D273255B1C5630DD00FA8C2E /* JTSBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSBViewController.h; sourceTree = "<group>"; };
-		D273255C1C5630DD00FA8C2E /* JTSBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSBViewController.m; sourceTree = "<group>"; };
+		D21AAB491C741F9800CFF134 /* UIViewController+JTNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JTNavigationExtension.h"; sourceTree = "<group>"; };
+		D21AAB4A1C741F9800CFF134 /* UIViewController+JTNavigationExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JTNavigationExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +85,6 @@
 				94DDA7931C53BDFE0055D8A1 /* JTViewController.h */,
 				94DDA7911C53BDFE0055D8A1 /* JTViewController.m */,
 				94DDA7921C53BDFE0055D8A1 /* JTViewController.xib */,
-				D273255B1C5630DD00FA8C2E /* JTSBViewController.h */,
-				D273255C1C5630DD00FA8C2E /* JTSBViewController.m */,
 				94DDA7731C53BD190055D8A1 /* Main.storyboard */,
 				94DDA7761C53BD190055D8A1 /* Assets.xcassets */,
 				94DDA7781C53BD190055D8A1 /* LaunchScreen.storyboard */,
@@ -112,10 +107,10 @@
 			children = (
 				94DDA7821C53BD460055D8A1 /* backImage@2x.png */,
 				94DDA7831C53BD460055D8A1 /* backImage@3x.png */,
-				94DDA7841C53BD460055D8A1 /* JTBaseNavigationController.h */,
-				94DDA7851C53BD460055D8A1 /* JTBaseNavigationController.m */,
 				94DDA7861C53BD460055D8A1 /* JTNavigationController.h */,
 				94DDA7871C53BD460055D8A1 /* JTNavigationController.m */,
+				D21AAB491C741F9800CFF134 /* UIViewController+JTNavigationExtension.h */,
+				D21AAB4A1C741F9800CFF134 /* UIViewController+JTNavigationExtension.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -202,9 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DDA78A1C53BD460055D8A1 /* JTBaseNavigationController.m in Sources */,
-				D273255D1C5630DD00FA8C2E /* JTSBViewController.m in Sources */,
 				94DDA7941C53BDFE0055D8A1 /* JTViewController.m in Sources */,
+				D21AAB4B1C741F9800CFF134 /* UIViewController+JTNavigationExtension.m in Sources */,
 				94DDA78B1C53BD460055D8A1 /* JTNavigationController.m in Sources */,
 				94DDA76F1C53BD190055D8A1 /* AppDelegate.m in Sources */,
 				94DDA79B1C53BF1F0055D8A1 /* MainViewController.m in Sources */,
@@ -320,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JTNavigationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerrytian.JTNavigationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -331,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JTNavigationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerrytian.JTNavigationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";

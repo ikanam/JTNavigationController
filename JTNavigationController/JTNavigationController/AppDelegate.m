@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "JTBaseNavigationController.h"
 #import "JTNavigationController.h"
 #import "MainViewController.h"
 
@@ -21,13 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //使用storyboard请将下面三行代码注释
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[JTBaseNavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
     
-    [JTBaseNavigationController shareNavgationController].fullScreenPopGestureEnable = YES; //开启全屏返回手势
-    
-    [JTBaseNavigationController shareNavgationController].backButtonImage = [UIImage imageNamed:@"backImage"]; //设置返回按钮图片
+    self.window.rootViewController = [[MainViewController alloc] init];
     
     [self.window makeKeyAndVisible];
     

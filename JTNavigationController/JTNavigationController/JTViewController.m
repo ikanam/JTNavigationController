@@ -8,7 +8,7 @@
 
 #import "JTViewController.h"
 #import "UIColor+RandomColor.h"
-#import "JTBaseNavigationController.h"
+#import "UIViewController+JTNavigationExtension.h"
 
 @interface JTViewController ()
 
@@ -22,6 +22,8 @@
     self.navigationController.navigationBar.barTintColor = [UIColor randomColor];
     self.view.backgroundColor = [UIColor randomColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(didTapNextButton)];
+    
+//    self.jt_fullScreenPopGestureEnabled = NO; //关闭当前控制器的全屏返回手势
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -30,6 +32,7 @@
 
 - (void)didTapNextButton {
     JTViewController *viewController = [[JTViewController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
@@ -38,7 +41,7 @@
 }
 
 - (IBAction)didTapPopToButton:(id)sender {
-    [self.navigationController popToViewController:[JTBaseNavigationController shareNavgationController].rootViewControllers.firstObject animated:YES];
+    [self.navigationController popToViewController:self.jt_navigationController.jt_viewControllers[0] animated:YES];
 }
 
 - (IBAction)didTapPopToRootButton:(id)sender {

@@ -24,12 +24,14 @@
     firstVC.title = @"First";
     firstVC.tabBarItem = firstItem;
     JTNavigationController *firstNav = [[JTNavigationController alloc] initWithRootViewController:firstVC];
+    firstNav.fullScreenPopGestureEnabled = YES;
     
     JTViewController *secondVC = [[JTViewController alloc] init];
     UITabBarItem *secondItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:2];
     secondVC.title = @"Second";
     secondVC.tabBarItem = secondItem;
     JTNavigationController *secondNav = [[JTNavigationController alloc] initWithRootViewController:secondVC];
+    secondNav.fullScreenPopGestureEnabled = NO;
     
     self.viewControllers = @[firstNav, secondNav];
 }
