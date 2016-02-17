@@ -8,15 +8,12 @@
 ![](https://github.com/JNTian/JTNavigationController/blob/master/demo.gif)
 
 ####集成方法
- 1. 替换原`window`的`rootViewController`为`[[JTBaseNavigationController alloc] initWithRootViewController:原rootViewController]`.
- 
- 2. 将需要实现该动画效果的`UINavigationController`替换为为`JTNavigationController`
-
-如果你使用的是storyboard:
- 1. 在根控制器外加一个`UINavigationController`,将Class改为`JTBaseNavigationController`,并将原来的根控制器设为`rootViewController`,记得设置Initial.
-
- 2. 将需要实现该动画效果的`UINavigationController`的Class替换为`JTNavigationController`.
-
+  
+#####1. 代码方式
+将原来的`UINavigationController`替换为`JTNavigationController`即可.
+  
+#####2. stroyboard方式
+修改`UINavigationController`的class为`JTNavigationController`
 
 ####相关操作
  1. push,pop,popToRoot的操作可以无需作调整,使用`self.navigationController`的方法就行,`popToViewController`稍微有些不同,详情见Demo中的代码.
@@ -27,8 +24,8 @@
  
  4. 修改`barTintColor`,增加`barButtonItem`等导航栏的操作都能放到viewDidLoad中,因为每个控制器都有属于自己的`UINavigationController`,所以不会影响到其他控制器的导航栏.
  
- 5. 新加入了全屏返回手势,`fullScreenPopGestureEnable = YES`即可开启.
+ 5. 全屏返回手势,`fullScreenPopGestureEnable = YES`即可开启.
+ 
+ 6. 需要关闭或开启单独一个控制器的全屏返回手势,导入`UIViewController+JTNavigationExtension.h`头文件并设置`self.jt_fullScreenPopGestureEnabled;`即可.
+ 
 
-####已知问题
- 1. UITabBarController的tabBar在push时会被隐藏，如果有需求是需要不隐藏tabBar的可以再等等看。
- 2. 其他隐藏的问题应该还有很多，希望有问题的能提出来。
