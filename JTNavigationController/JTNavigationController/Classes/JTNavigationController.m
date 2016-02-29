@@ -53,6 +53,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
+    [self.navigationController dismissViewControllerAnimated:flag completion:completion];
+    self.viewControllers.firstObject.jt_navigationController=nil;
+}
+
 @end
 
 #pragma mark - JTWrapViewController
