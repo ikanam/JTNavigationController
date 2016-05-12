@@ -13,6 +13,6 @@
 
 @property (nonatomic, assign) BOOL jt_fullScreenPopGestureEnabled;
 
-@property (nonatomic, strong) JTNavigationController *jt_navigationController;
+@property (nonatomic, weak) JTNavigationController *jt_navigationController;
 
 @end

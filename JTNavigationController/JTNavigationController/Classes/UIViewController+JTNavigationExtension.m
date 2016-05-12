@@ -24,7 +24,7 @@
 }
 
 - (void)setJt_navigationController:(JTNavigationController *)navigationController {
-    objc_setAssociatedObject(self, @selector(jt_navigationController), navigationController, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(jt_navigationController), navigationController, OBJC_ASSOCIATION_ASSIGN);
 }
 
 @end
